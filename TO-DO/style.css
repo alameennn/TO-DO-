@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    background: linear-gradient(145deg, #ececec, #ffffff, #ececec);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#taskInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#addTaskButton {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#addTaskButton:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+li .task-date {
+    font-size: 12px;
+    color: #666;
+    margin-right: auto;
+    padding-right: 10px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li.important {
+    background: #fff3cd;
+    border-color: #ffeeba;
+}
+
+button.complete-btn, button.important-btn {
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+button.complete-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+button.complete-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+}
+
+button.important-btn {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+button.important-btn:hover {
+    background: linear-gradient(135deg, #e0a800, #ffc107);
+}
