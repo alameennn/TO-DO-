@@ -75,6 +75,7 @@ li .task-date {
 li.completed {
     text-decoration: line-through;
     color: #888;
+    background-color: #d4edda; /* Light green background for completed tasks */
 }
 
 li.important {
@@ -94,11 +95,11 @@ button.complete-btn, button.important-btn {
 }
 
 button.complete-btn {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: linear-gradient(135deg, #28a745, #218838); /* Updated to light green */
 }
 
 button.complete-btn:hover {
-    background: linear-gradient(135deg, #0056b3, #007bff);
+    background: linear-gradient(135deg, #218838, #28a745);
 }
 
 button.important-btn {
