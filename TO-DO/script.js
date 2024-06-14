@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         taskTextSpan.textContent = taskText;
         
         const completeButton = document.createElement('button');
-        completeButton.textContent = 'Complete';
+        completeButton.textContent = 'Completed';
         completeButton.classList.add('complete-btn');
         completeButton.addEventListener('click', () => {
             li.classList.toggle('completed');
+            sortTasks();
         });
 
         const importantButton = document.createElement('button');
@@ -43,12 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
         sortTasks();
     }
 
-    // Function to sort tasks so important tasks are at the top
+    // Function to sort tasks: important tasks at the top, completed tasks at the bottom
     function sortTasks() {
         const tasks = Array.from(taskList.children);
         tasks.sort((a, b) => {
             if (a.classList.contains('important') && !b.classList.contains('important')) return -1;
             if (!a.classList.contains('important') && b.classList.contains('important')) return 1;
+            if (a.classList.contains('completed') && !b.classList.contains('completed')) return 1;
+            if (!a.classList.contains('completed') && b.classList.contains('completed')) return -1;
             return 0;
         });
         tasks.forEach(task => taskList.appendChild(task));
